@@ -1,0 +1,88 @@
+<!doctype html>
+<!--Alex Kurtz
+11/20/15
+Project 5
+CMPT120L-122-->
+<html>
+<head>
+<!--Title Set and Script tag to JS File-->	
+	<title>The Hero's Journey</title>
+	<meta charset='utf-8'/>
+	<script type='text/javascript' src='locations.js'></script>
+	<script type='text/javascript' src='player.js'></script>
+	<script type='text/javascript' src='Loc.js'></script>
+	<script type='text/javascript' src='item.js'></script>
+	<script type='text/javascript' src='thegame.js'></script>
+	<link href = 'thegame.css' type = 'text/css' rel = 'stylesheet'>
+</head>
+<body>
+
+<!--Header for Page-->
+<h1>The Hero's Journey</h1>
+
+<div id = 'points'>
+    
+<!-- Header to Show Current Score-->
+Points: <div id='score'>0</div> 
+
+    </div>
+    
+<!-- Header to Show Current Location-->
+<div id='location'> You are in the Main Hall.</div>
+
+<!--Group to display the status and players inventory -->
+
+<div id = 'status'> 
+    
+<div id='errorDisplay'></div>
+
+<div id='itemMessege'></div>
+    
+</div>
+    
+<!-- Creates Text box for user to input Location via text, uses button to call the submit button function-->
+
+<div id='controls'>    
+
+User Input: <input type = 'text' name = 'User Input:' id = 'userInput'>
+<button onclick = 'submitButton()'>Submit</button>
+	<br>
+
+    </div>
+
+<!--Buttons to for user to click to change location and uses ID tag to disable correct button based on Location Specific function-->
+
+<div id='Commands'>
+    
+<button id = 'Inventory' onclick = 'Inventory()'>Inventory</button>
+
+<button id = 'Help' onclick = 'help()'>Help</button>
+    
+<button id = 'Previous Moves' onclick = 'previousLocations()'>Previous Locations</button>
+
+<button id = 'take' onclick = 'takeItem()'>Take</button>
+
+<button id='Look' onclick = 'look()'>Look</button>
+	<br>
+</div>
+
+<div id = 'btngroup'>
+
+    <button id='northBtn' onclick = 'goNorth()'>Go North</button><br>
+    
+    <button id='westBtn' onclick = 'goWest()'>Go West</button> 
+
+    <button id='eastBtn' onclick = 'goEast()'>Go East</button><br>
+
+    <button id='southBtn' onclick = 'goSouth()'>Go South</button>
+
+</div>
+
+<!-- mail to link-->
+<a href='mailto:alexander.kurtz1@marist.edu'>Email Me</a>
+	<br>
+
+<img src='Map.png'/>
+
+</body> 
+
